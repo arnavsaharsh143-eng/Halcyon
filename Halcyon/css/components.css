@@ -1,0 +1,85 @@
+/* Header & Navigation */
+header {
+    background-color: #B0C4DE;
+    /* Light Steel Blue */
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #4682B4;
+    /* Steel Blue */
+    font-weight: 600;
+}
+
+/* Buttons */
+button {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #36648B;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Nav */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* In a real app, would be a hamburger menu */
+    }
+
+    /* Simple mobile nav for this demo */
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 10px;
+    }
+}

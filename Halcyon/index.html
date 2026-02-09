@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halcyon - Lifting Others Up</title>
+    <!-- Fonts - Times New Roman is a system font, no Google Fonts needed for it, but keeping links just in case user reverts -->
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/feelings.css">
+    <link rel="stylesheet" href="css/breathing.css">
+    <link rel="stylesheet" href="css/quotes.css">
+    <link rel="stylesheet" href="css/sos.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+
+<body>
+    <!-- Mouse Follow Navigation Arrows -->
+    <div id="nav-arrow-left" class="nav-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4682B4" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </div>
+    <div id="nav-arrow-right" class="nav-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4682B4" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Halcyon</div>
+            <ul class="nav-links">
+                <!-- Javascript will handle active class and sliding -->
+                <li><a href="#" onclick="navigateTo(0); return false;" class="nav-item active" data-index="0">Home</a>
+                </li>
+                <li><a href="#" onclick="navigateTo(1); return false;" class="nav-item" data-index="1">Feelings</a></li>
+                <li><a href="#" onclick="navigateTo(2); return false;" class="nav-item" data-index="2">Breathing</a>
+                </li>
+                <li><a href="#" onclick="navigateTo(3); return false;" class="nav-item" data-index="3">Quotes</a></li>
+                <li><a href="#" onclick="navigateTo(4); return false;" class="nav-item" data-index="4">SOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Slider Container -->
+    <div id="main-slider">
+
+        <!-- PAGE 0: HOME -->
+        <section class="page-section" id="page-home">
+            <main>
+                <div class="home-hero">
+                    <div class="hero-content">
+                        <h1>Welcome to Halcyon</h1>
+                        <p>Your safe space for peace, reflection, and balance.</p>
+                        <!-- Explore button navigates to Feelings (Page 1) -->
+                        <button id="explore-btn" onclick="navigateTo(1)">Explore</button>
+                    </div>
+                </div>
+
+                <!-- Preview Sections (Simplified for SPA) -->
+                <section class="home-section section-feelings">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h2>Understanding Your Feelings</h2>
+                            <p>Explore our mood tracker to find comforting words tailored to how you feel.</p>
+                            <button onclick="navigateTo(1)">Check In</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="images/feelings_illustration_1770640201834.png" alt="Abstract Feelings"
+                                class="section-image">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="home-section section-breathing">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h2>Breathe & Relax</h2>
+                            <p>Take a moment to center yourself with our guided breathing exercise.</p>
+                            <button onclick="navigateTo(2)">Breathe</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="images/breathing_illustration_1770640215724.png" alt="Breathing"
+                                class="section-image">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="home-section section-quotes">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h2>Daily Inspiration</h2>
+                            <p>Discover quotes that uplift and inspire you.</p>
+                            <button onclick="navigateTo(3)">Get Inspired</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="images/quotes_illustration_1770640289898.png" alt="Quotes" class="section-image">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="home-section section-sos">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h2>You Are Not Alone</h2>
+                            <p>Access immediate support resources and helplines.</p>
+                            <button class="sos-alert-btn" onclick="navigateTo(4)">Get Help</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="images/sos_illustration_1770640253297.png" alt="Support" class="section-image">
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <!-- PAGE 1: FEELINGS -->
+        <section class="page-section" id="page-feelings">
+            <main>
+                <div class="page-content-wrapper">
+                    <section id="feelings" class="active-section">
+                        <div class="feelings-header">
+                            <h2>How are you feeling today?</h2>
+                        </div>
+
+                        <div class="mood-grid">
+                            <div class="mood-card" data-mood="anxious">
+                                <img src="images/mood_anxious_1770640745468.png" alt="Anxious" class="mood-icon-img">
+                                <div class="icon">😰</div>
+                                <h3>Anxious</h3>
+                            </div>
+                            <div class="mood-card" data-mood="sad">
+                                <img src="images/mood_sad_1770640762085.png" alt="Sad" class="mood-icon-img">
+                                <div class="icon">😢</div>
+                                <h3>Sad</h3>
+                            </div>
+                            <div class="mood-card" data-mood="overwhelmed">
+                                <img src="images/mood_overwhelmed_1770640802818.png" alt="Overwhelmed"
+                                    class="mood-icon-img">
+                                <div class="icon">🤯</div>
+                                <h3>Overwhelmed</h3>
+                            </div>
+                            <div class="mood-card" data-mood="lonely">
+                                <img src="images/mood_lonely_1770640823660.png" alt="Lonely" class="mood-icon-img">
+                                <div class="icon">😔</div>
+                                <h3>Lonely</h3>
+                            </div>
+                            <div class="mood-card" data-mood="tired">
+                                <img src="images/mood_tired_1770640852663.png" alt="Tired" class="mood-icon-img">
+                                <div class="icon">😴</div>
+                                <h3>Tired</h3>
+                            </div>
+                            <div class="mood-card" data-mood="stressed">
+                                <img src="images/mood_anxious_1770640745468.png" alt="Stressed" class="mood-icon-img">
+                                <div class="icon">😫</div>
+                                <h3>Stressed</h3>
+                            </div>
+                        </div>
+
+                        <div id="mood-response" class="hidden">
+                            <p id="mood-quote"></p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </section>
+
+        <!-- PAGE 2: BREATHING -->
+        <section class="page-section" id="page-breathing">
+            <main>
+                <div class="page-content-wrapper">
+                    <section id="breathing">
+                        <h2>Breathing Exercises</h2>
+
+                        <div class="breathing-display-area">
+                            <div class="breathing-container">
+                                <div class="circle">
+                                    <span id="breath-instruction">Ready?</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="breathing-ui-panel">
+                            <div class="controls">
+                                <button id="start-breathing">Start</button>
+                                <button id="stop-breathing">Stop</button>
+                            </div>
+
+                            <div class="cycle-counter-container">
+                                <span class="cycle-label">Cycles Completed</span>
+                                <span id="cycle-count" class="cycle-badge">0</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </section>
+
+        <!-- PAGE 3: QUOTES -->
+        <section class="page-section" id="page-quotes">
+            <main class="quotes-main-container">
+                <!-- Daily Inspiration Section -->
+                <section id="daily-inspiration">
+                    <div class="inspiration-content">
+                        <h2>Daily Inspiration</h2>
+                        <div class="quote-card">
+                            <p id="quote-text">"You are enough just as you are."</p>
+                            <button id="new-quote">New Quote</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Board Section -->
+                <section id="community-board">
+                    <div class="community-content">
+                        <h2>Community Board</h2>
+                        <div class="chat-interface">
+                            <div class="chat-feed" id="chat-feed">
+                                <div class="message system-message">Welcome to the community board! Share your
+                                    thoughts...</div>
+                            </div>
+                            <div class="chat-input-area">
+                                <textarea id="chat-message" placeholder="Share something positive..."></textarea>
+                                <button id="share-btn">Share</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <!-- PAGE 4: SOS -->
+        <section class="page-section" id="page-sos">
+            <main>
+                <div class="page-content-wrapper">
+                    <section id="sos">
+                        <div class="sos-hero">
+                            <h2>You Are Not Alone</h2>
+                            <p class="subtitle">Support is available 24/7. Reaching out is a sign of strength.</p>
+                        </div>
+
+                        <div class="sos-cards-container">
+                            <div class="sos-card stagger-1">
+                                <div class="card-icon">🏫</div>
+                                <h3>School Counselor</h3>
+                                <p>Available during school hours for guidance and support.</p>
+                                <a href="tel:1234567890" class="sos-btn">Call Now</a>
+                            </div>
+
+                            <div class="sos-card stagger-2">
+                                <div class="card-icon">📞</div>
+                                <h3>National Helpline</h3>
+                                <p>Confidential support for people in distress.</p>
+                                <a href="tel:988" class="sos-btn">Call 988</a>
+                            </div>
+
+                            <div class="sos-card stagger-3">
+                                <div class="card-icon">💬</div>
+                                <h3>Crisis Text Line</h3>
+                                <p>Text HOME to 741741 to connect with a Crisis Counselor.</p>
+                                <a href="sms:741741&body=HOME" class="sos-btn">Text HOME</a>
+                            </div>
+                        </div>
+
+                        <div class="support-message">
+                            <p>"No storm lasts forever. We are here to help you through the rain."</p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </section>
+
+    </div> <!-- End Main Slider -->
+
+    <!-- Logic Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/quotes-data.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="js/feelings.js" defer></script>
+    <script src="js/breathing.js" defer></script>
+    <script src="js/slider.js" defer></script> <!-- New Slider Logic -->
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halcyon - Breathing</title>
+    <!-- Link to new modular CSS files -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/breathing.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Halcyon</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feelings.html">Feelings</a></li>
+                <li><a href="breathing.html" class="active">Breathing</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="sos.html">SOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Breathing Exercise Page -->
+        <section id="breathing">
+            <h2>Breathing Exercises</h2>
+
+            <div class="breathing-display-area">
+                <div class="breathing-container">
+                    <div class="circle">
+                        <span id="breath-instruction">Ready?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="breathing-ui-panel">
+                <div class="controls">
+                    <button id="start-breathing">Start</button>
+                    <button id="stop-breathing">Stop</button>
+                </div>
+
+                <div class="cycle-counter-container">
+                    <span class="cycle-label">Cycles Completed</span>
+                    <span id="cycle-count" class="cycle-badge">0</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link to new modular JS files -->
+    <script src="js/main.js" defer></script>
+    <script src="js/breathing.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+/* Global Reset & Box Model */
+:root {
+    /* Halcyon Palette */
+    --primary-color: #4682B4;
+    /* Steel Blue */
+    --background-color: #F0F8FF;
+    /* Alice Blue */
+    --card-bg: #FFFFFF;
+    --text-color: #333333;
+    --accent-color: #4682B4;
+    --font-heading: 'Times New Roman', serif;
+    --font-body: 'Times New Roman', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 12pt;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    margin-top: 80px;
+    /* Offset for fixed header */
+    padding: 0;
+    /* Remove global padding to allow full-width sections */
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    font-size: 24pt;
+}
+
+/* Hidden utility */
+.hidden {
+    display: none;
+}
+
+/* --- Page Transition Animations --- */
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Transition Classes */
+.page-transition-enter {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.page-transition-exit {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+/* Stagger Animation Helper Classes */
+/* Used for mood cards and SOS buttons to pop in one by one */
+.stagger-1 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.stagger-2 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.stagger-3 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.stagger-4 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.stagger-5 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.stagger-6 {
+    animation: slideUp 0.6s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}

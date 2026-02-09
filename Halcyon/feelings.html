@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halcyon - Feelings</title>
+    <!-- Link to new modular CSS files -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/feelings.css">
+    <link rel="stylesheet" href="css/home.css"> <!-- For shared styles if any -->
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Halcyon</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feelings.html" class="active">Feelings</a></li>
+                <li><a href="breathing.html">Breathing</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li><a href="sos.html">SOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Feelings Page -->
+        <section id="feelings" class="active-section">
+            <div class="feelings-header">
+                <h2>How are you feeling today?</h2>
+            </div>
+
+            <div class="mood-grid">
+                <div class="mood-card" data-mood="anxious">
+                    <img src="images/mood_anxious_1770640745468.png" alt="Anxious icon" class="mood-icon-img">
+                    <div class="icon">😰</div>
+                    <h3>Anxious</h3>
+                </div>
+                <div class="mood-card" data-mood="sad">
+                    <img src="images/mood_sad_1770640762085.png" alt="Sad icon" class="mood-icon-img">
+                    <div class="icon">😢</div>
+                    <h3>Sad</h3>
+                </div>
+                <div class="mood-card" data-mood="overwhelmed">
+                    <img src="images/mood_overwhelmed_1770640802818.png" alt="Overwhelmed icon" class="mood-icon-img">
+                    <div class="icon">🤯</div>
+                    <h3>Overwhelmed</h3>
+                </div>
+                <div class="mood-card" data-mood="lonely">
+                    <img src="images/mood_lonely_1770640823660.png" alt="Lonely icon" class="mood-icon-img">
+                    <div class="icon">😔</div>
+                    <h3>Lonely</h3>
+                </div>
+                <div class="mood-card" data-mood="tired">
+                    <img src="images/mood_tired_1770640852663.png" alt="Tired icon" class="mood-icon-img">
+                    <div class="icon">😴</div>
+                    <h3>Tired</h3>
+                </div>
+                <div class="mood-card" data-mood="stressed">
+                    <!-- Using Anxious as placeholder since Stressed failed gen -->
+                    <img src="images/mood_anxious_1770640745468.png" alt="Stressed icon" class="mood-icon-img">
+                    <div class="icon">😫</div>
+                    <h3>Stressed</h3>
+                </div>
+            </div>
+
+            <div id="mood-response" class="hidden">
+                <p id="mood-quote"></p>
+                <!-- Reset button removed as requested -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Link to new modular JS files -->
+    <script src="js/main.js" defer></script>
+    <script src="js/quotes-data.js" defer></script>
+    <script src="js/feelings.js" defer></script>
+</body>
+
+</html>
